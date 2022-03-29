@@ -22,7 +22,12 @@ export default function Footer() {
               Repo API
             </a>
           </li>
-          <li className="ms-3">Repo React JS</li>
+          <li className="ms-3"><a
+              className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+              href="https://github.com/tinoreyna1984/sist-restaurante-frontend"
+            >
+              Repo React JS
+            </a></li>
         </ul>
       </footer>
     </div>
