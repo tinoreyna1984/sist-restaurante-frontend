@@ -8,7 +8,7 @@ function App() {
     <div
       className="container"
       style={{
-        padding: "75px 20px 0px 20px",
+        padding: "100px 20px 0px 20px",
       }}
     >
       <IndexSite />
