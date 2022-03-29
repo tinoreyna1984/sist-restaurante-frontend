@@ -95,7 +95,7 @@ const Uso = () => {
               </div>
               <div className="col">
                 <a
-                  href="#"
+                  href="https://github.com/tinoreyna1984/sist-restaurante-frontend"
                   className="btn btn-dark"
                   target="_blank"
                   rel="noreferrer"
