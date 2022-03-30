@@ -1,21 +1,27 @@
 import React from "react";
+import { useGet } from "../api/Methods";
+import TinoForm from "../components/TinoForm";
 
 const ItemsRest = () => {
+  const data = useGet();
+  console.log(data);
   return (
     <div className="container">
       <div className="row align-items-center">
         <h1>RESTaurant API</h1>
-        <p className="fs-5 col-md-10">
-          Minim cupidatat quis eiusmod incididunt non amet enim fugiat reprehenderit cillum. Aliquip reprehenderit magna tempor eiusmod eu. Aliqua dolore quis Lorem in adipisicing minim mollit nulla culpa sunt ipsum irure. Reprehenderit mollit sit nulla cillum dolore ea voluptate consectetur.
-        </p>
-        <h2>Starter projects</h2>
-        <p className="fs-5 col-md-10">
-          Minim cupidatat quis eiusmod incididunt non amet enim fugiat reprehenderit cillum. Aliquip reprehenderit magna tempor eiusmod eu. Aliqua dolore quis Lorem in adipisicing minim mollit nulla culpa sunt ipsum irure. Reprehenderit mollit sit nulla cillum dolore ea voluptate consectetur.
-        </p>
-        <h2>Guides</h2>
-        <p className="fs-5 col-md-10">
-          Minim cupidatat quis eiusmod incididunt non amet enim fugiat reprehenderit cillum. Aliquip reprehenderit magna tempor eiusmod eu. Aliqua dolore quis Lorem in adipisicing minim mollit nulla culpa sunt ipsum irure. Reprehenderit mollit sit nulla cillum dolore ea voluptate consectetur.
-        </p>
+        <h2>Platos típicos peruanos</h2>
+        <ul className="fs-5 col-md-10" style={{ listStyle: "none" }}>
+          {data.map((item) => (
+            <li key={item.id}>{item.descripcion}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="row align-items-center">
+        <h2>Registro un nuevo mesero</h2>
+        < TinoForm />
+      </div>
+      <div className="row align-items-center">
+        <h2>Más información de uso en la siguiente pestaña.</h2>
       </div>
     </div>
   );
