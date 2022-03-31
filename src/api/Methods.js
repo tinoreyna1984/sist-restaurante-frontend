@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { urlItemsRest, urlWaiter } from "../api/Api";
 
-export function useGet() {
+export function useGetAllItems() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -16,10 +16,21 @@ export function useGet() {
   return items;
 }
 
+export function doGetWaiter(id) {
+  if (id === undefined) {
+    return { id: "", codMesero: "", nombreMesero: "" };
+  }
+  const waiter = fetch(`${urlWaiter}/${id}`, { method: "GET" })
+    .then((response) => response.json())
+    .catch((error) => console.log(error));
+
+  return waiter;
+}
+
 export function doPost(data) {
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json", 'Accept': 'application/json' },
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify(data),
   };
   const res = fetch(urlWaiter, requestOptions)

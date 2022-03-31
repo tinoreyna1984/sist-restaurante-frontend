@@ -1,9 +1,10 @@
 import React from "react";
-import { useGet } from "../api/Methods";
-import TinoForm from "../components/TinoForm";
+import { useGetAllItems } from "../api/Methods";
+import TinoQueryForm from "../components/TinoQueryForm";
+import TinoSubmitForm from "../components/TinoSubmitForm";
 
 const ItemsRest = () => {
-  const data = useGet();
+  const data = useGetAllItems();
   console.log(data);
   return (
     <div className="container">
@@ -12,13 +13,19 @@ const ItemsRest = () => {
         <h2>Platos típicos peruanos</h2>
         <ul className="fs-5 col-md-10" style={{ listStyle: "none" }}>
           {data.map((item) => (
-            <li key={item.id}>{item.descripcion}</li>
+            <li key={item.id}>
+              {item.descripcion}, a USD{item.precio}
+            </li>
           ))}
         </ul>
       </div>
       <div className="row align-items-center">
         <h2>Registro un nuevo mesero</h2>
-        < TinoForm />
+        <TinoSubmitForm />
+      </div>
+      <div className="row align-items-center">
+        <h2>Consultar mesero por ID (valores {">"}= 1)</h2>
+        <TinoQueryForm />
       </div>
       <div className="row align-items-center">
         <h2>Más información de uso en la siguiente pestaña.</h2>
