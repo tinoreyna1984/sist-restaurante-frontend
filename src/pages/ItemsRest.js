@@ -5,7 +5,7 @@ import TinoSubmitForm from "../components/TinoSubmitForm";
 
 const ItemsRest = () => {
   const data = useGetAllItems();
-  console.log(data);
+  //console.log(data);
   return (
     <div className="container">
       <div className="row align-items-center">

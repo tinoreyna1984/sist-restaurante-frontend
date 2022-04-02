@@ -16,17 +16,6 @@ export function useGetAllItems() {
   return items;
 }
 
-export function doGetWaiter(id) {
-  if (id === undefined) {
-    return { id: "", codMesero: "", nombreMesero: "" };
-  }
-  const waiter = fetch(`${urlWaiter}/${id}`, { method: "GET" })
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
-
-  return waiter;
-}
-
 export function doPost(data) {
   const requestOptions = {
     method: "POST",
