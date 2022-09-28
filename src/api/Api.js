@@ -2,7 +2,7 @@
  * Declaracion de valores de API para uso en toda la aplicacion
  */
 
-const URL = 'https://sist-restaurante-backend.herokuapp.com/';
+const URL = 'https://sist-restaurante-backend.onrender.com/';
 const urlItemsRest = URL + "itemrestaurante";
 const urlUser = URL + "usuario";
 const urlWaiter = URL + "mesero";
