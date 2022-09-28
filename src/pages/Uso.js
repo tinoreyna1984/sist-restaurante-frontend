@@ -17,7 +17,7 @@ const Uso = () => {
         <p className="fs-5 col-md-10">
           <a
             className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-            href="https://sist-restaurante-backend.herokuapp.com"
+            href="https://sist-restaurante-backend.onrender.com/"
             target="_blank"
             rel="noreferrer"
           >
